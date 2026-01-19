@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  /* Define custom colors matching your brand */
+  --color-azar-blue: #003d7a;
+  --color-azar-dark: #002a5c;
+  --color-azar-gold: #f39c12;
+  
+  /* Set Inter as the default sans font */
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* Ensure font is loaded - add this link in your index.html head if not already there:
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+*/
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc; /* Slate-50 equivalent */
+}
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
